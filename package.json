@@ -1,0 +1,33 @@
+{
+  "name": "tipster",
+  "version": "0.0.1",
+  "private": false,
+  "engines": {
+    "node": "*",
+    "npm": "*"
+  },
+  "description": "an ongoing activities manager",
+  "keywords": ["resource", "locking", "manager", "task", "coordinate", "async"],
+  "homepage": "http://github.com/jcppman/tipster",
+  "bugs": {
+    "url": "http://github.com/jcppman/tipster/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Chriest Yu",
+    "email": "jcppman@gmail.com",
+    "url": "http://github.com/jcppman"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/jcppman/tipster.git"
+  },
+  "dependencies": {
+    "underscore": "1.6.x"
+  },
+  "devDependencies": {
+    "mocha": "1.18.2",
+    "should": "3.3.1"
+  }
+}
