@@ -48,16 +48,7 @@ Tipster.prototype.buildCheckers = function () {
 
     var related = underscore.keys(rules).filter(function (rule) {
 
-      if (rule.indexOf('*') !== -1) {
-
-        var reg = new RegExp(rule.replace('.','\\.').replace('*','.*'));
-        return (!!reg.exec(element));
-      
-      } else {
-
-        return (rule === element);
-      
-      }
+      return that.isRelated(element, rule);
   
     });
 
@@ -137,6 +128,28 @@ Tipster.prototype.done = function (item) {
   var logouts = that.logouts;
   
   logouts[item]();
+
+};
+
+Tipster.prototype.isRelated = function (element, rule) {
+
+  if (rule.indexOf('*') !== -1) {
+
+    var reg = new RegExp(rule.replace('.','\\.').replace('*','.*'));
+    return (!!reg.exec(element));
+  
+  } else {
+
+    return (rule === element);
+  
+  }
+
+};
+
+Tipster.prototype.getStatus = function () {
+
+  var that = this;
+  return that.pool;
 
 };
 
